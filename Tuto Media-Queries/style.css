@@ -1,0 +1,80 @@
+/* Style par défaut pour toutes les tailles d'écran */
+.card {
+    background-color: white;
+    color: black;
+    text-align: center;
+}
+
+/* Media query pour les écrans très petits de moins de 360px (petits téléphones) */
+@media (max-width: 359.98px) {
+    .card {
+        background-color: purple;
+        font-size: 12px;
+    }
+}
+
+/* Media query pour les écrans entre 360px et 575.98px (téléphones) */
+@media (min-width: 360px) and (max-width: 575.98px) {
+    .card {
+        background-color: lightblue;
+        font-size: 14px;
+    }
+}
+
+/* Media query pour les écrans entre 576px et 767px (tablettes) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .card {
+        background-color: lightgreen;
+        font-size: 16px;
+    }
+}
+
+/* Media query pour les écrans de 768px à 991px (tablettes en paysage) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .card {
+        background-color: lightyellow;
+        font-size: 18px;
+    }
+}
+
+/* Media query pour les écrans de plus de 992px (ordinateurs de bureau) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .card {
+        background-color: lightcoral;
+        font-size: 20px;
+    }
+}
+
+/* Media query pour les écrans de plus de 1200px (ordinateurs de bureau) */
+@media (min-width: 1200px) and (max-width: 1399.98px){
+    .card {
+        background-color: blue;
+        font-size: 20px;
+    }
+}
+
+/* Media query pour les écrans très grands de plus de 1400px (moniteurs larges) */
+@media (min-width: 1400px) {
+    .card {
+        background-color: lime;
+        font-size: 22px;
+    }
+}
+
+/*
+
+En Bootstrap X-Small(xs) couvre tous les écrans de 0px à 575.98px. 
+xs n'a pas de classe spécifique comme sm, md, lg, etc., car il s'agit de la taille par défaut pour tous les écrans inférieurs à 576px.
+Si vous ne spécifiez pas de point de rupture (par exemple, utiliser simplement .col), Bootstrap considère que cela s'applique à tous les écrans, y compris xs.
+
+Catégorie			abréviation			classe bootstrap		plage en pixel
+X-Small 			xs 					None 					<576px
+Small 				sm 					sm 						≥576px
+Medium 				md 					md 						≥768px
+Large 				lg 					lg 						≥992px
+Extra large 		xl 					xl 						≥1200px
+Extra extra large 	xxl					xxl 					≥1400px
+  
+  
+  
+  */
