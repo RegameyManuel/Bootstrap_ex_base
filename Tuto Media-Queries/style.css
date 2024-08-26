@@ -1,8 +1,18 @@
 /* Style par défaut pour toutes les tailles d'écran */
 .card {
-    background-color: white;
     color: black;
+    border: 1px solid #000;
     text-align: center;
+    padding: 20px;
+}
+
+
+.label-container {
+    margin: 20px 0;
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: red;
 }
 
 /* Media query pour les écrans très petits de moins de 360px (petits téléphones) */
@@ -59,6 +69,10 @@
         background-color: lime;
         font-size: 22px;
     }
+}
+
+.element {
+    margin: 20px; /* 20 pixels d'espace à l'extérieur de l'élément, entre la bordure de l'élément et les éléments voisins */
 }
 
 /*

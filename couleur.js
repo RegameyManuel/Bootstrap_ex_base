@@ -1,6 +1,6 @@
-<script>
+
 document.addEventListener("DOMContentLoaded", function() {
-  var cards = document.querySelectorAll('.card');
+  let cards = document.querySelectorAll('.card');
   var pastelColors = ['#7C9ACC', '#90B7CF', '#B3DDCD', 
                       '#D0E7DA', '#E8BED3', '#FADADD', 
                       '#FBE7B2', '#FFD7A5', '#E7FBBE', 
@@ -11,16 +11,15 @@ document.addEventListener("DOMContentLoaded", function() {
                       '#B5D8EB', '#FAFAD2', '#D3E0EA',
                       '#99C1DE'];
 
-  var previousColorIndex = -1;
+  let previousColorIndex = -1;
 
   cards.forEach(function(card) {
-    var randomColorIndex;
+    let randomColorIndex;
     do {
-      randomColorIndex = Math.floor(Math.random() * pastelColors.length);
+      randomColorIndex = Math.floor(Math.random() * pastelColors.length)
     } while (randomColorIndex === previousColorIndex);
   
     card.style.backgroundColor = pastelColors[randomColorIndex];
     previousColorIndex = randomColorIndex;
   });
 });
-</script>
