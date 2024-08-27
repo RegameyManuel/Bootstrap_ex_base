@@ -8,21 +8,47 @@ p {
     font-size: 1.2em;
 }
 
-@media screen and (max-width: 900px) {
-    h1 {
-        color: blue;
-    }
-    p {
-        font-size: 1.1em;
+.card {
+    text-align: center;
+    padding: 20px;
+    background-color: lightgray; /* Couleur par défaut */
+    border: 1px solid #000; /* Bordure par défaut */
+}
+
+.label-container {
+    margin: 20px 0;
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+/* Couleurs selon les breakpoints Bootstrap */
+@media (min-width: 576px) {
+    .card {
+        background-color: lightblue; /* Couleur pour sm */
     }
 }
 
-@media screen and (max-width: 600px) {
-    h1 {
-        color: green;
-        border: 2px solid green;
+@media (min-width: 768px) {
+    .card {
+        background-color: lightgreen; /* Couleur pour md */
     }
-    p {
-        font-size: 1em;
+}
+
+@media (min-width: 992px) {
+    .card {
+        background-color: lightcoral; /* Couleur pour lg */
+    }
+}
+
+@media (min-width: 1200px) {
+    .card {
+        background-color: lightgoldenrodyellow; /* Couleur pour xl */
+    }
+}
+
+@media (min-width: 1400px) {
+    .card {
+        background-color: lightsalmon; /* Couleur pour xxl */
     }
 }

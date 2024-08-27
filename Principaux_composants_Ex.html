@@ -7,6 +7,8 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
     />
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+
     <style>
       /* From extension vscode.github */
       /*---------------------------------------------------------------------------------------------
@@ -629,76 +631,275 @@
 
       <li>
         <p>
-          <strong>Formulaires (Forms)</strong> : Offrent divers éléments pour la
-          saisie de données, tels que les champs de texte, les boutons radio, et
-          les cases à cocher.
+          <strong>Formulaires (Forms)</strong> : Offrent divers éléments pour la saisie de données, tels que les champs de texte, les boutons radio, et les cases à cocher.
         </p>
+        <form>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Adresse email</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <div id="emailHelp" class="form-text">Nous ne partagerons jamais votre email.</div>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Mot de passe</label>
+            <input type="password" class="form-control" id="exampleInputPassword1">
+          </div>
+          <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Se souvenir de moi</label>
+          </div>
+          <button type="submit" class="btn btn-primary">Envoyer</button>
+        </form>
       </li>
+      
 
       <li>
         <p>
-          <strong>Modales (Modals)</strong> : Des boîtes de dialogue dynamiques
-          qui peuvent être utilisées pour des notifications, des confirmations,
-          ou pour afficher du contenu personnalisé.
+          <strong>Modales (Modals)</strong> : Des boîtes de dialogue dynamiques qui peuvent être utilisées pour des notifications, des confirmations, ou pour afficher du contenu personnalisé.
         </p>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          Ouvrir la modal
+        </button>
+      
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Titre de la modal</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                Contenu de la modal...
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                <button type="button" class="btn btn-primary">Sauvegarder</button>
+              </div>
+            </div>
+          </div>
+        </div>
       </li>
+      
+      <li>
+        <p>
+          <strong>Popovers</strong> : Des infobulles avancées qui peuvent contenir du texte ou du HTML, utiles pour ajouter des descriptions ou des guides.
+        </p>
+        <button type="button" class="btn btn-lg btn-danger" data-bs-toggle="popover" title="Titre du popover" data-bs-content="Et voici du contenu incroyable. C'est vraiment incroyable !">
+          Cliquer pour voir le popover
+        </button>
+        <script>
+          var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+          var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+            return new bootstrap.Popover(popoverTriggerEl)
+          })
+        </script>
+      </li>
+      
+      <li>
+        <p>
+          <strong>Tooltips</strong> : Des infobulles textuelles qui s'affichent au survol d'un élément, idéales pour fournir des informations supplémentaires.
+        </p>
+      
+        <!-- Tooltip simple sur un bouton -->
+        <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip">
+          Survolez-moi
+        </button>
+      </li>
+      
+      
 
       <li>
         <p>
-          <strong>Popovers</strong> : Des infobulles avancées qui peuvent
-          contenir du texte ou du HTML, utiles pour ajouter des descriptions ou
-          des guides.
+          <strong>Système de grille (Grid System)</strong> : Un système flexible pour créer des layouts responsive à travers une série de conteneurs, de lignes et de colonnes.
         </p>
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              Colonne 1
+            </div>
+            <div class="col">
+              Colonne 2
+            </div>
+            <div class="col">
+              Colonne 3
+            </div>
+          </div>
+        </div>
       </li>
+      
 
       <li>
         <p>
-          <strong>Tooltips</strong> : Des infobulles textuelles qui s'affichent
-          au survol d'un élément, idéales pour fournir des informations
-          supplémentaires.
+          <strong>Breadcrumbs</strong> : Indiquent le chemin de navigation actuel et améliorent la capacité de l'utilisateur à comprendre et à naviguer dans l'interface.
         </p>
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Accueil</a></li>
+            <li class="breadcrumb-item"><a href="#">Bibliothèque</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Données</li>
+          </ol>
+        </nav>
       </li>
+      
 
       <li>
         <p>
-          <strong>Système de grille (Grid System)</strong> : Un système flexible
-          pour créer des layouts responsive à travers une série de conteneurs,
-          de lignes et de colonnes.
+          <strong>Pagination</strong> : Un composant pour la pagination, permettant de naviguer entre différentes pages de contenu.
         </p>
+        <nav aria-label="Page navigation example">
+          <ul class="pagination">
+            <li class="page-item"><a class="page-link" href="#">Précédent</a></li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">Suivant</a></li>
+          </ul>
+        </nav>
       </li>
+      
 
       <li>
         <p>
-          <strong>Breadcrumbs</strong> : Indiquent le chemin de navigation
-          actuel et améliorent la capacité de l'utilisateur à comprendre et à
-          naviguer dans l'interface.
+          <strong>Badges</strong> : De petits comptes et indicateurs, souvent utilisés pour ajouter des informations contextuelles aux autres contenus.
         </p>
+      
+        <!-- Badge dans un bouton -->
+        <button type="button" class="btn btn-primary">
+          Notifications <span class="badge bg-secondary">4</span>
+        </button>
+      
+        <!-- Badge dans un lien de navigation -->
+        <nav aria-label="breadcrumb" class="mt-3">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Accueil</a></li>
+            <li class="breadcrumb-item"><a href="#">Bibliothèque</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Données <span class="badge bg-warning">Nouveau</span></li>
+          </ol>
+        </nav>
+      
+        <!-- Badge dans un titre -->
+        <h1 class="mt-3">
+          Titre principal <span class="badge bg-success">Succès</span>
+        </h1>
+      
+        <!-- Badge dynamique dans une liste -->
+        <ul class="list-group mt-3">
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            Éléments
+            <span class="badge bg-primary rounded-pill">14</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            Messages non lus
+            <span class="badge bg-danger rounded-pill">7</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            Tâches
+            <span class="badge bg-info rounded-pill">3</span>
+          </li>
+        </ul>
+      
+        <!-- Badge avec différentes couleurs -->
+        <div class="mt-3">
+          <span class="badge bg-primary">Primary</span>
+          <span class="badge bg-secondary">Secondary</span>
+          <span class="badge bg-success">Success</span>
+          <span class="badge bg-danger">Danger</span>
+          <span class="badge bg-warning text-dark">Warning</span>
+          <span class="badge bg-info text-dark">Info</span>
+          <span class="badge bg-light text-dark">Light</span>
+          <span class="badge bg-dark">Dark</span>
+        </div>
+      
+        <!-- Badge sous forme de lien -->
+        <div class="mt-3">
+          <a href="#" class="badge bg-primary">Lien avec badge</a>
+        </div>
+      
+        <!-- Badge dans un bouton dynamique avec JavaScript -->
+        <div class="mt-3">
+          <button id="dynamicBadgeButton" type="button" class="btn btn-primary">
+            Messages <span id="dynamicBadge" class="badge bg-secondary">0</span>
+          </button>
+          <button type="button" class="btn btn-success ms-2" onclick="incrementBadge()">Ajouter un message</button>
+        </div>
+      
+        <script>
+          var badgeCount = 0;
+          function incrementBadge() {
+            badgeCount++;
+            document.getElementById('dynamicBadge').textContent = badgeCount;
+          }
+        </script>
       </li>
+      
+      
 
+      
       <li>
         <p>
-          <strong>Pagination</strong> : Un composant pour la pagination,
-          permettant de naviguer entre différentes pages de contenu.
+          <strong>Progress bars</strong> : Des barres de progression pour afficher visuellement le progrès d'une tâche ou d'un processus.
         </p>
+      
+        <!-- Barre de progression simple -->
+        <div class="progress mb-3">
+          <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50%</div>
+        </div>
+      
+        <!-- Barre de progression avec différentes couleurs -->
+        <div class="progress mb-3">
+          <div class="progress-bar bg-success" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+        </div>
+        <div class="progress mb-3">
+          <div class="progress-bar bg-info" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50%</div>
+        </div>
+        <div class="progress mb-3">
+          <div class="progress-bar bg-warning" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
+        </div>
+        <div class="progress mb-3">
+          <div class="progress-bar bg-danger" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">100%</div>
+        </div>
+      
+        <!-- Barre de progression avec animation -->
+        <div class="progress mb-3">
+          <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
+        </div>
+      
+        <!-- Barre de progression empilée -->
+        <div class="progress mb-3">
+          <div class="progress-bar bg-success" role="progressbar" style="width: 35%;" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100">35%</div>
+          <div class="progress-bar bg-warning" role="progressbar" style="width: 20%;" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">20%</div>
+          <div class="progress-bar bg-danger" role="progressbar" style="width: 10%;" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">10%</div>
+        </div>
+      
+        <!-- Barre de progression avec étiquettes -->
+        <div class="progress mb-3">
+          <div class="progress-bar" role="progressbar" style="width: 60%;" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
+            60% Complete
+          </div>
+        </div>
+      
+        <!-- Barre de progression avec hauteur personnalisée -->
+        <div class="progress mb-3" style="height: 30px;">
+          <div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">80%</div>
+        </div>
       </li>
+      
 
-      <li>
-        <p>
-          <strong>Badges</strong> : De petits comptes et indicateurs, souvent
-          utilisés pour ajouter des informations contextuelles aux autres
-          contenus.
-        </p>
-      </li>
 
-      <li>
-        <p>
-          <strong>Progress bars</strong> : Des barres de progression pour
-          afficher visuellement le progrès d'une tâche ou d'un processus.
-        </p>
-      </li>
     </ol>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+
+      <!-- Script Bootstrap et Popper.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.6/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+
+  <script>
+    // Initialisation des popovers
+    var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'));
+    var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+      return new bootstrap.Popover(popoverTriggerEl);
+    });
+  </script>
   </body>
 </html>
